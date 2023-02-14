@@ -20,6 +20,5 @@ Start syncing ... 4
 End syncing ... 4
 Final result [6 1 6 6 0 3 4 1]
 
-
 - The first line of each file contain the initial data of the node. For data above: "Init data: [1 4 0 8 4 0 6 6]"
 - The lat line of each file contain the final result after syncing. For data above: "Final result [6 1 6 6 0 3 4 1]"
