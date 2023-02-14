@@ -2,7 +2,10 @@ binary=snowball-consensus
 
 .PHONY: demo all clean kill
 
-demo: $(binary)
+log:
+	mkdir log
+
+demo: $(binary) log
 	for i in `seq 0 199`; do (./$< $$i > log/log$$i.txt &); done;
 
 all: $(binary)
@@ -10,7 +13,7 @@ all: $(binary)
 	./$< &
 
 clean:
-	go clean && rm log/*
+	go clean && rm -rf log/
 
 $(binary): main.go servicenode/node.go
 	go build
