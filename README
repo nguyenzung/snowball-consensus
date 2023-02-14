@@ -1,0 +1,36 @@
+Demo program about snowball algorithm
+Each node init a local list of integer (each item has value between 0 and 8)
+Our demo will sync all data to get the final result. 
+After running the result, we can check in log folder, each node has a log file. We can check the log files to verify our program
+
+
+1. Tools:
+- Go 1.18
+- GNU Make 4.2.1
+
+2. Run:
+- Step 1: Kill previous processes: make kill
+- Step 2: Run demo: make demo
+
+3. Check result: open the log file. 
+- The log files contain data that format like:
+
+Init data: [1 4 0 8 4 0 6 6]
+Start syncing ... 4
+Transform data [1 4 0 8 4 0 6 6] [1 5 2 2 7 6 8 1]
+Transform data [1 5 2 2 7 6 8 1] [6 1 3 6 2 3 4 0]
+Transform data [6 1 3 6 2 3 4 0] [1 1 6 6 1 3 8 7]
+Transform data [1 1 6 6 1 3 8 7] [6 1 6 6 0 3 8 1]
+Transform data [6 1 6 6 0 3 8 1] [6 1 6 6 0 3 8 1]
+Transform data [6 1 6 6 0 3 8 1] [6 1 6 6 0 3 4 1]
+Transform data [6 1 6 6 0 3 4 1] [6 1 6 6 0 3 4 1]
+Transform data [6 1 6 6 0 3 4 1] [6 1 6 6 0 3 4 1]
+Transform data [6 1 6 6 0 3 4 1] [6 1 6 6 0 3 4 1]
+Transform data [6 1 6 6 0 3 4 1] [6 1 6 6 0 3 4 1]
+Transform data [6 1 6 6 0 3 4 1] [6 1 6 6 0 3 4 1]
+End syncing ... 4
+Final result [6 1 6 6 0 3 4 1]
+
+
+- The first line of each file contain the initial data of the node. For data above: "Init data: [1 4 0 8 4 0 6 6]"
+- The lat line of each file contain the final result after syncing. For data above: "Final result [6 1 6 6 0 3 4 1]"
