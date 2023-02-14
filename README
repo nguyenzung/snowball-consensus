@@ -1,5 +1,5 @@
 Demo program about snowball algorithm
-Each node init a local list of integer (each item has value between 0 and 8)
+Each node init a local list of integer (each item has value between 0 and 9)
 Our demo will sync all data to get the final result. 
 After running the result, we can check in log folder, each node has a log file. We can check the log files to verify our program
 
