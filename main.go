@@ -14,7 +14,7 @@ func main() {
 
 	nodeID, _ := strconv.Atoi(os.Args[1])
 
-	node := servicenode.MakeNode(nodeID, 200, 9, 8, 20, 5)
+	node := servicenode.MakeNode(nodeID, 200, 9, 16, 20, 5)
 
 	http.HandleFunc("/localdata", func(w http.ResponseWriter, r *http.Request) {
 		data := node.GetUpdatedData()
