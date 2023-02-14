@@ -117,7 +117,6 @@ func (node *Node) combineData(sampleData [][]int) []int {
 			if sampleData[j] != nil {
 				transformedData[i][sampleData[j][i]]++
 			}
-
 		}
 	}
 
@@ -136,7 +135,7 @@ func (node *Node) combineData(sampleData [][]int) []int {
 }
 
 func (node *Node) checkSameResult(new []int) bool {
-	fmt.Println("Transform data", node.UpdatedData, new)
+	// fmt.Println("Transform data", node.UpdatedData, new)
 	for i := 0; i < len(new); i++ {
 		if node.UpdatedData[i] != new[i] {
 			return false
