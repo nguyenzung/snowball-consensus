@@ -114,7 +114,10 @@ func (node *Node) combineData(sampleData [][]int) []int {
 	// calculate transformedData array
 	for i := 0; i < node.DataSize; i++ {
 		for j := 0; j < node.SampleSize; j++ {
-			transformedData[i][sampleData[j][i]]++
+			if sampleData[j] != nil {
+				transformedData[i][sampleData[j][i]]++
+			}
+
 		}
 	}
 
