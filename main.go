@@ -14,7 +14,11 @@ func main() {
 
 	nodeID, _ := strconv.Atoi(os.Args[1])
 
-	node := servicenode.MakeNode(nodeID, 200, 9, 16, 20, 5)
+	ListSize := 16
+	NumOfSampleNode := 18
+	DecisionThreshold := 5
+
+	node := servicenode.MakeNode(nodeID, 200, 10, ListSize, NumOfSampleNode, DecisionThreshold)
 
 	http.HandleFunc("/localdata", func(w http.ResponseWriter, r *http.Request) {
 		data := node.GetUpdatedData()
